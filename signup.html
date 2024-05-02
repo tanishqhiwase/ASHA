@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>signup</title>
+<link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="signup.css">
+<script type="module" >
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyB25hsESuXfk-hHV227LNLq0_3iPw1ZpQo",
+        authDomain: "ashahealth.firebaseapp.com",
+        databaseURL: "https://ashahealth-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "ashahealth",
+        storageBucket: "ashahealth.appspot.com",
+        messagingSenderId: "309095509074",
+        appId: "1:309095509074:web:c51f3361a746e099c6838b",
+        measurementId: "G-6XQFSQWZQ2"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
+
+    function signUpWithEmailAndPassword(email, password, fullName) {
+        return createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log("User UID:", userCredential.user.uid);
+                window.location.href = "aof.html"; 
+                return set(ref(database, 'users/' + userCredential.user.uid), {
+                    fullName: fullName,
+                    email: email
+                });
+            })
+            .then(() => {
+                console.log("Signed up successfully:", email); 
+            })
+            .catch((error) => {
+                console.error("Sign-up error:", error.message); 
+            });
+    }
+
+    const form = document.getElementById('signup-form');
+    form.onsubmit = handleSignUp;
+
+    function handleSignUp(event) {
+        event.preventDefault(); 
+        console.log("Form submitted"); 
+        const fullName = event.target.elements.fullName.value; 
+        const email = event.target.elements.email.value; 
+        const password = event.target.elements.password.value; 
+        signUpWithEmailAndPassword(email, password, fullName); 
+    }
+
+
+</script>
+</head>
+<body>
+    <h5 id="company-name">ASHA HEALTH SERVICES</h5>
+  
+<div id="top-bar">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Logo" id="logo2"> 
+    <a href="tanishq.html">Home</a>
+    <a href="service.html">Services</a>
+    <a href="whyasha.html">Why Asha?</a>
+    <a href="contact.html">Contact Us</a>
+</div>
+<div id="content"></div>
+    <style>
+        .ellipse1 {
+        position: fixed;
+        top: 7rem;
+        left: 0;
+        width: 30.0rem;
+        height: 30.0rem;
+        background-color: rgba(121, 229, 112, 0.4);
+        border-radius: 0 0 100% 0;
+        transform: rotate(0deg);
+        z-index: -1;
+        }
+        
+      </style>
+      <div class="ellipse1"></div>
+      <style>
+        .ellipse2 {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 30.0rem;
+        height: 30.0rem;
+        background-color: rgba(121, 229, 112, 0.4);
+        border-radius: 0 0 100% 0;
+        transform: rotate(180deg);
+        z-index: -1;
+        }
+        
+      </style>
+      <div class="ellipse2"></div>
+
+      <div class="login-box">
+        <div class="left-side">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Logo" id="logo"> 
+            </div>
+        </div>
+        <div class="right-side">
+        <h2>Signup</h2>
+        <style>
+            h2{
+            color: #3A9A44; 
+            font-family: 'Rhodium Libre',sans-serif;
+            font-size: 5rem;
+            margin-top: 3rem; 
+            text-align: center;
+            -webkit-text-stroke: 18.75% #3A9A44;
+        }
+    </style>
+      <form id="signup-form" action="aof.html" method="post" >
+        <input type="text" name="fullName" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+    </div>
+   
+</body>
+</html>

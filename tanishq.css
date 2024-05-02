@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(228, 255, 231, 1); 
+  font-family: Arial, sans-serif;
+}
+
+#top-bar {
+  background-color: #ffffff; 
+  padding: 2.5rem;
+  text-align: right; 
+}
+
+#top-bar h2 {
+  color: #000000; 
+  font-size: 1.8rem; 
+  margin: 0 2.0rem; 
+  text-align: left;
+}
+
+#top-bar a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 3.5rem;
+  font-size: 1.8rem;
+  display: inline-block; 
+  background-color: rgba(45, 138, 54, 0.5); 
+  border-radius: 2.0rem;
+  padding: 1.0rem 3.5rem; 
+}
+
+#content {
+  padding: 2.0rem;
+  margin-top: 5.0rem; 
+  margin-left: 3.0rem;
+}
+
+#ellipse {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 30.0rem;
+  height: 30.0rem;
+  background-color:rgba(121, 229, 112, 0.4);
+  border-radius: 100% 0 0 0;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+#company-name {
+  position: absolute; 
+  top: 1.2rem; 
+  left: 11.0rem; 
+  margin: 0; 
+  font-size: 4.5rem;
+  background-image: linear-gradient(to right,#34C17E, #0E7443);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Rhodium Libre',sans-serif;
+}
+
+#logo {
+  position: absolute; 
+  top: 4%; 
+  transform: translateY(-50%);
+  left: 0.6rem; 
+  width: 10.0rem;
+    height: 10.0rem;
+}
+
+.button {
+  background-color: rgba(45, 138, 54, 0.5); 
+  color: #fff; 
+  border-radius: 3.0rem; 
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3; 
+}
+
+.button-container {
+  position: relative; 
+  margin-top: 50.0rem;
+}
+
+
+#loginButton{
+  position: absolute;
+  top: 58.0rem;
+  left: 40.0rem;
+  padding: 2.0rem 10.0rem;
+  background-color: #ffffff; 
+  color: rgba(45, 138, 54, 0.5); 
+  border: 0.3rem solid rgba(45, 138, 54, 0.5);
+  border-radius: 3.0rem; 
+  -webkit-text-stroke: 2px #3A9A44; 
+}
+
+
+#signupButton {
+  position: absolute;
+  top: 58.0rem; 
+  left: 4.5rem; 
+padding: 2.0rem 10.0rem;
+background-color: rgba(45, 138, 54, 0.5); 
+color: #ffffff;
+-webkit-text-stroke: 1px #ffffff;
+border: none;
+}
+
+
+.ellipse-container {
+  position: absolute;
+  bottom: 2.0rem; 
+  right: 0rem; 
+  width: 85.0rem; 
+  height: 80.0rem; 
+  border-radius: 50%; 
+  background-color: rgba(121, 229, 112, 0.4);
+}
+
+.ellipse-image {
+  position: absolute;
+  right:0rem;
+  bottom:2rem;
+  top:12rem;
+  width: 75.0rem; 
+  height: 70.0rem;
+  border-radius: 2.0rem; 
+}
+
+
+
+html{
+  font-size: 62.5%;
+  
+  }
+  
+  @media only screen and (max-width: 768px) {
+   
+    html {
+      font-size: 55%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+   
+    html {
+      font-size: 45%;
+    }
+  }
+    @media (max-width: 768px) {
+      .ellipse-image{
+        max-width: 80%; 
+        max-height: 80%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+.ellipse-container {
+  width: 50.0rem; 
+  height: 50.0rem;
+  }
+  #ellipse{
+    width: 25.0rem; 
+    height:25.0rem;
+  }
+  #logo{
+    max-width: 70%; 
+    max-height: 70%;
+  }
+  
+}

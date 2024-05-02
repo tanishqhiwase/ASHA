@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8f3dc; 
+margin: 0;   
+ padding: 0;
+ 
+}
+.container {
+    position:absolute;
+    top:50rem;
+    width: 100rem;
+    margin-bottom: 20rem;
+    left: 35rem;
+    margin: 0rem auto;
+    padding: 2.0rem ;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+#service2{
+    position:absolute;
+    top:464rem;
+    font-size:5rem;
+    left: 10rem;  
+    background-image: linear-gradient(to right,#34C17E, #0E7443); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-family: 'Rhodium Libre',sans-serif;
+    text-decoration: underline;
+    text-decoration-color:#0E7443; 
+  
+  }
+.selected-portion {
+    position: absolute;
+    width: 168.9rem; 
+    height: 40rem; 
+    top:9.3rem;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 2px solid #000;
+  }
+  
+  .selected-portion img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .selected-portion2 {
+    position: absolute;
+    width: 85rem; 
+    height: 40rem; 
+    top:9.3rem;
+    left:0rem;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 2px solid #000;
+  }
+  .selected-portion2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  #top-bar {
+    background-color: #ffffff; 
+    padding: 2.5rem;
+    text-align: right; 
+  }
+  
+  #top-bar h2 {
+    color: #000000;
+    font-size: 1.8rem; 
+    margin: 0 2.0rem; 
+    text-align: left;
+  }
+  
+  #top-bar a {
+    color: #000000; 
+    text-decoration: none;
+    margin: 0 3.5rem;
+    font-size: 1.8rem;
+    display: inline-block; 
+    background-color: rgba(45, 138, 54, 0.5); 
+    border-radius: 2.0rem; 
+    padding: 1.0rem 3.5rem; 
+  }
+  #content {
+    padding: 2.0rem;
+    margin-top: -4.0rem; 
+    margin-left: 3.0rem; 
+  }
+  
+  
+  #company-name {
+    position: absolute; 
+    top: 1.2rem; 
+    left: 11.0rem; 
+    margin: 0; 
+    font-size: 4.5rem;
+    background-image: linear-gradient(to right,#34C17E, #0E7443); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-family: 'Rhodium Libre',sans-serif;
+  }
+  
+  #logo {
+    position: absolute; 
+    top: 4%; 
+    transform: translateY(-50%); 
+    left: 0.6rem; 
+    width: 10.0rem;
+    height: 10.0rem;
+  }
+
+h1 {
+    color: #007965; 
+    text-align: center;
+    font-family: 'Rhodium Libre',sans-serif;
+    font-size: 4rem;
+}
+h2 {
+    color: #007965; 
+    font-family: 'Rhodium Libre',sans-serif;
+    font-size: 3rem;
+}
+p {
+    margin-bottom: 1.5rem;
+    font-family: 'Rhodium Libre',sans-serif;
+   font-size: 2rem;
+}
+.scheme {
+    font-family: 'Rhodium Libre',sans-serif;
+}
+html{
+    font-size: 62.5%;
+    
+    }
+    
+    @media only screen and (max-width: 768px) {
+     
+      html {
+        font-size: 55%;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+     
+      html {
+        font-size: 45%;
+      }
+    }
+      @media (max-width: 768px) {
+        .ellipse-image{
+          max-width: 80%; 
+          max-height: 80%;
+        }
+      }
+      
+    #logo{
+      max-width: 70%;
+      max-height: 70%;
+    }
+    

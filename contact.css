@@ -1,0 +1,169 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgba(228, 255, 231, 1); 
+}
+
+.container {
+    width: 80rem;
+    height: auto;
+    margin: 5.0rem auto;
+    padding: 2.0rem ;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+}
+
+.selected-portion{
+background-color: #008604;
+padding: 5rem;
+}
+
+   #contactus{
+    position: absolute; 
+    top: 12rem; 
+    left: 15.0rem; 
+    margin: 0; 
+    font-size: 4.5rem;
+    color: #ffffff;
+  }
+
+  #top-bar {
+    background-color: #ffffff; 
+    padding: 2.5rem;
+    text-align: right; 
+  }
+  
+  #top-bar h2 {
+    color: #000000; 
+    font-size: 1.8rem; 
+    margin: 0 2.0rem; 
+    text-align: left;
+  }
+  
+  #top-bar a {
+    color: #000000; 
+    text-decoration: none;
+    margin: 0 3.5rem;
+    font-size: 1.8rem;
+    display: inline-block; 
+    background-color: rgba(45, 138, 54, 0.5);
+    border-radius: 2.0rem; 
+    padding: 1.0rem 3.5rem; 
+  }
+  #content {
+    padding: 2.0rem;
+    margin-top: -4.0rem; 
+    margin-left: 3.0rem; 
+  }
+  
+  
+  #company-name {
+    position: absolute; 
+    top: 1.2rem; 
+    left: 11.0rem; 
+    margin: 0; 
+    font-size: 4.5rem;
+    background-image: linear-gradient(to right,#34C17E, #0E7443); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-family: 'Rhodium Libre',sans-serif;
+  }
+  
+  #logo {
+    position: absolute; 
+    top: 4%;
+    transform: translateY(-50%); 
+    left: 0.6rem; 
+    width: 10.0rem;
+    height: 10.0rem;
+  }
+
+
+h1 {
+    color: #333;
+    font-size:4rem;
+    font-family: "Rhodium-Libre";
+}
+
+h2 {
+    color: #555;
+    font-size:3rem;
+    font-family: "Rhodium-Libre";
+
+}
+
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size:2rem;
+    font-family: "Rhodium-Libre";
+
+
+}
+
+label {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Rhodium-Libre";
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 95%;
+    padding: 1.0rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+html{
+    font-size: 62.5%;
+    
+    }
+    
+    @media only screen and (max-width: 768px) {
+     
+      html {
+        font-size: 55%;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+     
+      html {
+        font-size: 45%;
+      }
+    }
+      @media (max-width: 768px) {
+        .ellipse-image{
+          max-width: 80%; 
+          max-height: 80%;
+        }
+      }
+      
+    #logo{
+      max-width: 70%; 
+      max-height: 70%;
+    }
+    
+  
+  

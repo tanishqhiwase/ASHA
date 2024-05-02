@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+<link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+    const firebaseConfig = {
+    apiKey: "AIzaSyB25hsESuXfk-hHV227LNLq0_3iPw1ZpQo",
+    authDomain: "ashahealth.firebaseapp.com",
+    projectId: "ashahealth",
+    storageBucket: "ashahealth.appspot.com",
+    messagingSenderId: "309095509074",
+    appId: "1:309095509074:web:c51f3361a746e099c6838b",
+    measurementId: "G-6XQFSQWZQ2"
+  };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit', handleLogin);
+
+    function handleLogin(event) {
+        event.preventDefault();
+        const email = event.target.elements.email.value;
+        const password = event.target.elements.password.value;
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log("User UID:", userCredential.user.uid);
+            })
+            .catch((error) => {
+                console.error("Sign-in error:", error.message);
+                document.getElementById("error-message").innerText = "Wrong email or password.";
+            });
+    }
+</script>
+
+
+</head>
+<body>
+    <h5 id="company-name">ASHA HEALTH SERVICES</h5>
+  
+<div id="top-bar">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Logo" id="logo2"> 
+    <a href="tanishq.html">Home</a>
+    <a href="service.html">Services</a>
+    <a href="whyasha.html">Why Asha?</a>
+    <a href="contact.html">Contact Us</a>
+</div>
+<div id="content"></div>
+    <style>
+        .ellipse1 {
+        position: absolute;
+        top: 9rem;
+        right: 0;
+        width: 30.0rem;
+        height: 30.0rem;
+        background-color: rgba(121, 229, 112, 0.4);
+        border-radius: 0 0 100% 0;
+        transform: rotate(90deg);
+        z-index: -1;
+        }
+        
+      </style>
+      <div class="ellipse1"></div>
+      <style>
+        .ellipse2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30.0rem;
+        height: 30.0rem;
+        background-color: rgba(121, 229, 112, 0.4);
+        border-radius: 0 0 100% 0;
+        transform: rotate(270deg);
+        z-index: -1;
+        }
+        
+      </style>
+      <div class="ellipse2"></div>
+<div class="login-box">
+    <div class="left-side">
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Logo" id="logo"> 
+        </div>
+    </div>
+    <div class="right-side">
+        <h2>Log In</h2>
+    <style>
+        h2{
+        color: #3A9A44; 
+        font-family: 'Rhodium Libre',sans-serif;
+        font-size: 5rem;
+        margin-top: 3rem; 
+        text-align: center;
+        -webkit-text-stroke: 18.75% #3A9A44;
+    }
+    </style>
+        <p id="error-message" style="color: red;"></p>
+        <form id="login-form" action="#" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
