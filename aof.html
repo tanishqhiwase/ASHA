@@ -24,54 +24,38 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Company Logo" class="logo">
     <h1 id="company-name">ASHA HEALTH SERVICES</h1>
     <h2>Account Opening Form</h2>
-    <form action="#" method="post">
+    <form action="card.html" method="post">
         <label for="profile_image">Upload Profile Image:</label>
         <input type="file" id="profile_image" name="profile_image" accept="image/*">
 
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" required>
+        
+         <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <label for="medical_details">Medical Details Since Birth:</label>
-        <textarea id="medical_details" name="medical_details" rows="5" required></textarea>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
 
-        <label for="chronic_illness">1. Have you been diagnosed with any chronic illnesses since birth? If yes, please specify:</label>
-        <input type="text" id="chronic_illness" name="chronic_illness">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
 
-        <label for="surgeries">2. Have you undergone any surgeries or medical procedures since birth? If yes, please provide details:</label>
-        <textarea id="surgeries" name="surgeries" rows="3"></textarea>
-
-        <label for="allergies">3. Do you have any known allergies? If yes, please list them:</label>
-        <input type="text" id="allergies" name="allergies">
-
-        <label for="hospitalizations">4. Have you ever been hospitalized for any reason since birth? If yes, please describe:</label>
-        <textarea id="hospitalizations" name="hospitalizations" rows="3"></textarea>
-
-        <label for="medications">5. Are you currently taking any medications or supplements? If yes, please list them along with the dosage:</label>
-        <textarea id="medications" name="medications" rows="3"></textarea>
-
-        <label for="injuries">6. Have you experienced any significant injuries or accidents since birth? If yes, please provide details:</label>
-        <textarea id="injuries" name="injuries" rows="3"></textarea>
-
-        <label for="family_history">7. Do you have any family history of genetic or hereditary conditions? If yes, please specify:</label>
-        <textarea id="family_history" name="family_history" rows="3"></textarea>
-
-        <label for="mental_health">8. Have you had any mental health concerns or diagnoses since birth? If yes, please describe:</label>
-        <textarea id="mental_health" name="mental_health" rows="3"></textarea>
-
-        <label for="developmental_delays">9. Have you had any developmental delays or disabilities diagnosed since birth? If yes, please provide details:</label>
-        <textarea id="developmental_delays" name="developmental_delays" rows="3"></textarea>
-
-        <label for="other_conditions">10. Are there any other medical conditions or concerns you would like to disclose since birth?</label>
-        <textarea id="other_conditions" name="other_conditions" rows="3"></textarea>
-
-        <input type="submit" value="Submit & Generate CARD  ">
-    </form>
+        <label for="gender">Gender (Enter M for Male, F for Female, O for Other):</label>
+        <input type="text" id="gender" name="gender" required>
+        
+        <input type="submit" value="Submit & Generate CARD  ">    </form>
 </div>
 
 </body>
