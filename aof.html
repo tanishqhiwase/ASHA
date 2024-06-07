@@ -1,62 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Account Opening Form</title>
-<link rel="stylesheet" type="text/css" href="aof.css">
-<link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Account Opening Form</title>
+		<link rel="stylesheet" type="text/css" href="aof.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h3 id="company-name2">ASHA HEALTH SERVICES</h3>
 
-</head>
-<body>
-    <h3 id="company-name2">ASHA HEALTH SERVICES</h3>
+		<div id="top-bar">
+			<img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU"
+				alt="Logo"
+				id="logo2"
+			/>
+			<a href="tanishq.html">Home</a>
+			<a href="service.html">Services</a>
+			<a href="whyasha.html">Why Asha?</a>
+			<a href="contact.html">Contact Us</a>
+		</div>
+		<div id="content"></div>
 
-    <div id="top-bar">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Logo" id="logo2"> 
-          <a href="tanishq.html">Home</a>
-          <a href="service.html">Services</a>
-          <a href="whyasha.html">Why Asha?</a>
-          <a href="contact.html">Contact Us</a>
-      </div>
-      <div id="content"></div>
+		<div id="container">
+			<img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU"
+				alt="Company Logo"
+				class="logo"
+			/>
+			<h1 id="company-name">ASHA HEALTH SERVICES</h1>
+			<h2>Account Opening Form</h2>
+			<form action="card.html" id="accountForm" method="post">
+				<label for="profileImage">Upload Profile Image:</label>
+				<input
+					type="file"
+					id="profileImage"
+					name="profileImage"
+					accept="image/*"
+				/>
 
-<div id="container">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvU8fFgt1huGsQlPvZZwvATo5ee60qSMJVQ&usqp=CAU" alt="Company Logo" class="logo">
-    <h1 id="company-name">ASHA HEALTH SERVICES</h1>
-    <h2>Account Opening Form</h2>
-    <form action="card.html" method="post">
-        <label for="profile_image">Upload Profile Image:</label>
-        <input type="file" id="profile_image" name="profile_image" accept="image/*">
+				<label for="name">Full Name:</label>
+				<input type="text" id="name" name="name" required />
 
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-        
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
-        
-         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+				<label for="age">Age:</label>
+				<input type="number" id="age" name="age" required />
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-        
-        <label for="pincode">Pincode:</label>
-        <input type="text" id="pincode" name="pincode" required>
-        
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required>
+				<label for="dob">Date of Birth:</label>
+				<input type="date" id="dob" name="dob" required />
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required />
 
-        <label for="gender">Gender (Enter M for Male, F for Female, O for Other):</label>
-        <input type="text" id="gender" name="gender" required>
-        
-        <input type="submit" value="Submit & Generate CARD  ">    </form>
-</div>
+				<label for="phone">Phone Number:</label>
+				<input type="tel" id="phone" name="phone" required />
 
-</body>
+				<label for="pincode">Pincode:</label>
+				<input type="text" id="pincode" name="pincode" required />
+
+				<label for="city">City:</label>
+				<input type="text" id="city" name="city" required />
+
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" required />
+
+				<label for="gender"
+					>Gender (Enter M for Male, F for Female, O for
+					Other):</label
+				>
+				<input type="text" id="gender" name="gender" required />
+
+				<input type="submit" value="Submit & Generate CARD  " />
+			</form>
+		</div>
+		<script>
+			document
+				.getElementById('accountForm')
+				.addEventListener('submit', async (event) => {
+					event.preventDefault()
+					const formData = new FormData()
+					formData.append(
+						'profileImage',
+						document.getElementById('profileImage').files[0]
+					)
+					formData.append(
+						'fullName',
+						document.getElementById('name').value
+					)
+					formData.append('age', document.getElementById('age').value)
+					formData.append('dob', document.getElementById('dob').value)
+					formData.append(
+						'email',
+						document.getElementById('email').value
+					)
+					formData.append(
+						'phoneNumber',
+						document.getElementById('phone').value
+					)
+					formData.append(
+						'pincode',
+						document.getElementById('pincode').value
+					)
+					formData.append(
+						'city',
+						document.getElementById('city').value
+					)
+					formData.append(
+						'address',
+						document.getElementById('address').value
+					)
+					formData.append(
+						'gender',
+						document.getElementById('gender').value
+					)
+
+					const token = localStorage.getItem('token')
+
+					const response = await fetch(
+						'http://localhost:5000/account',
+						{
+							method: 'POST',
+							headers: {
+								Authorization: token,
+							},
+							body: formData,
+						}
+					)
+
+					const result = await response.json()
+					alert(result.message)
+					if (response.status === 200)
+						location.href = '/myprofile.html'
+				})
+		</script>
+	</body>
 </html>

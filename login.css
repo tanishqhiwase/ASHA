@@ -1,168 +1,160 @@
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: rgba(228, 255, 231, 1); 
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: Arial, sans-serif;
+	background-color: rgba(228, 255, 231, 1);
 }
 
 .login-box {
-  position: absolute;
-  top: 25rem;
-  width: 80.0rem;
-  height: 50rem;
-  padding: 2.0rem;
-  background-color: #fff;
-  border-radius: 2.0rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
+	position: absolute;
+	top: 25rem;
+	width: 80rem;
+	height: 50rem;
+	padding: 2rem;
+	background-color: #fff;
+	border-radius: 2rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
 }
 
 .left-side {
-  flex: 1;
-  border-radius: 2.0rem;
+	flex: 1;
+	border-radius: 2rem;
 }
 
 .right-side {
-  flex: 1;
-  padding-left: 20px;
-
+	flex: 1;
+	padding-left: 20px;
 }
 
 .logo {
-  max-width: 100%;
-  height: 100%;
-  display: flex;
-  margin-top: 0rem;
-  margin-left: 0rem;
+	max-width: 100%;
+	height: 100%;
+	display: flex;
+	margin-top: 0rem;
+	margin-left: 0rem;
 }
 
-input[type="email"]{
-  width: 100%;
-  font-size: 2rem;
-  padding: 2.0rem;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 2.0rem;
-  box-sizing: border-box;
-  margin-top: 2.5rem;
+input[type='email'] {
+	width: 100%;
+	font-size: 2rem;
+	padding: 2rem;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 2rem;
+	box-sizing: border-box;
+	margin-top: 2.5rem;
 }
-input[type="password"] {
-  width: 100%;
-    font-size: 2rem;
-    padding: 2.0rem;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 2.0rem;
-    box-sizing: border-box;
-    margin-top: 2.5rem;
-
-}
-
-input[type="submit"] {
-  width: 100%;
-  padding: 2rem;
-  border-color:rgb(51, 195, 67) ;
-  border-radius: 2.0rem;
-  background-color: rgb(255, 255, 255);
-  color: rgba(228, 255, 231, 1);
-  cursor: pointer;
-  margin-top: 3rem;
-  margin-bottom: 20px;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #3A9A44; 
-  font-family: 'Rhodium Libre',sans-serif;
-  -webkit-text-stroke: 18.75% #3A9A44;
+input[type='password'] {
+	width: 100%;
+	font-size: 2rem;
+	padding: 2rem;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 2rem;
+	box-sizing: border-box;
+	margin-top: 2.5rem;
 }
 
-.login-box input[type="submit"]:hover {
-  background-color: #0056b3;
+button[type='submit'] {
+	width: 100%;
+	padding: 2rem;
+	border-color: rgb(51, 195, 67);
+	border-radius: 2rem;
+	background-color: rgb(255, 255, 255);
+	color: rgba(228, 255, 231, 1);
+	cursor: pointer;
+	margin-top: 3rem;
+	margin-bottom: 20px;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #3a9a44;
+	font-family: 'Rhodium Libre', sans-serif;
+	-webkit-text-stroke: 18.75% #3a9a44;
 }
 
+.login-box input[type='submit']:hover {
+	background-color: #0056b3;
+}
 
-    #top-bar {
-      position: absolute ;
-      background-color: #ffffff;
-      padding: 2.5rem;
-      text-align: right; 
-      top:0;
-      width: 166rem;
-    }
-    
-    
-    #top-bar h2 {
-      color: #000000;
-      font-size: 1.8rem; 
-      margin: 0 2.0rem;
-      text-align: left;
-    }
-    
-    #top-bar a {
-      color: #000000; 
-      text-decoration: none;
-      margin: 0 3.5rem;
-      font-size: 1.8rem;
-      display: inline-block; 
-      background-color: rgba(45, 138, 54, 0.5); 
-      border-radius: 2.0rem; 
-      padding: 1.0rem 3.5rem; 
-    }
-    #content {
-      padding: 2.0rem;
-      margin-top: -4.0rem;
-      margin-left: 3.0rem; 
-    }
-    
-    
-    #company-name {
-      position: absolute; 
-      top: 1.2rem;
-      left: 11.0rem;
-      margin: 0; 
-      font-size: 4.5rem;
-      background-image: linear-gradient(to right,#34C17E, #0E7443); 
-      -webkit-background-clip: text; 
-      -webkit-text-fill-color: transparent;
-      font-family: 'Rhodium Libre',sans-serif;
-      z-index: 1;
-    }
-    
-    #logo2 {
-      position: fixed; 
-      top: 4%; 
-      transform: translateY(-50%);
-      left: 0.6rem;
-      width: 10.0rem;
-      height: 10.0rem;
-    }
-    html{
-  font-size: 62.5%;
-  
-  }
-  
-  @media only screen and (max-width: 998px) {
-   
-    html {
-      font-size: 55%;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-   
-    html {
-      font-size: 45%;
-    }
-  }
-  @media (max-width: 768px) {
-    .ellipse-container {
-      width: 50.0rem; 
-      height: 50.0rem;
-      }
-      #ellipse{
-        width: 25.0rem; 
-        height:25.0rem;
-      }
-    }
+#top-bar {
+	position: absolute;
+	background-color: #ffffff;
+	padding: 2.5rem;
+	text-align: right;
+	top: 0;
+	width: 166rem;
+}
+
+#top-bar h2 {
+	color: #000000;
+	font-size: 1.8rem;
+	margin: 0 2rem;
+	text-align: left;
+}
+
+#top-bar a {
+	color: #000000;
+	text-decoration: none;
+	margin: 0 3.5rem;
+	font-size: 1.8rem;
+	display: inline-block;
+	background-color: rgba(45, 138, 54, 0.5);
+	border-radius: 2rem;
+	padding: 1rem 3.5rem;
+}
+#content {
+	padding: 2rem;
+	margin-top: -4rem;
+	margin-left: 3rem;
+}
+
+#company-name {
+	position: absolute;
+	top: 1.2rem;
+	left: 11rem;
+	margin: 0;
+	font-size: 4.5rem;
+	background-image: linear-gradient(to right, #34c17e, #0e7443);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Rhodium Libre', sans-serif;
+	z-index: 1;
+}
+
+#logo2 {
+	position: fixed;
+	top: 4%;
+	transform: translateY(-50%);
+	left: 0.6rem;
+	width: 10rem;
+	height: 10rem;
+}
+html {
+	font-size: 62.5%;
+}
+
+@media only screen and (max-width: 998px) {
+	html {
+		font-size: 55%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 45%;
+	}
+}
+@media (max-width: 768px) {
+	.ellipse-container {
+		width: 50rem;
+		height: 50rem;
+	}
+	#ellipse {
+		width: 25rem;
+		height: 25rem;
+	}
+}
